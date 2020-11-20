@@ -21,6 +21,8 @@ public class UploadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置请求编码
         request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html ; setchar = UTF-8");
+        response.setCharacterEncoding("UTF-8");
 
         //获取服务端用于存储文件的目录,我定义在web下MyFiles中方便查看
         File folder = new File("Z:/javaPro/JavaWeb文件上传下载/web/MyFiles");
@@ -54,7 +56,7 @@ public class UploadServlet extends HttpServlet {
             }
             //存储到服务器即我创建的MyFiles
             part.write("Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + str + "/" + fname);
-            //用于传给下载的Servlet使用即DownloadServlet,用到Session主要是因为要把数据保存给另一个请求用
+            //用于传给下载的Servlet使用即DownloadServlet,用到Session主要是因为要把数据保存给另一个Servlet请求用
             request.getSession().setAttribute("fileName" , fname);
             request.getSession().setAttribute("uploadPath" , "Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + str);
 
