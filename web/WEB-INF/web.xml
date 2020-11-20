@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!-- 注册页面-->
+    <servlet>
+        <servlet-name>RegistServlet</servlet-name>
+        <servlet-class>WEB.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistServlet</servlet-name>
+        <url-pattern>/registServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 登录页面-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>WEB.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 上传页面-->
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>WEB.UploadServlet</servlet-class>
+        <!-- mutipart的配置-->
+        <multipart-config>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 下载页面-->
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>WEB.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/downloadServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- VIP下载页面-->
+    <servlet>
+        <servlet-name>VipDownloadServlet</servlet-name>
+        <servlet-class>WEB.VipDownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VipDownloadServlet</servlet-name>
+        <url-pattern>/vipDownlaodServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 选择是普通下载还是vip下载-->
+    <servlet>
+        <servlet-name>SelectDownloadServlet</servlet-name>
+        <servlet-class>WEB.SelectDownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SelectDownloadServlet</servlet-name>
+        <url-pattern>/selectDownloadServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
