@@ -42,11 +42,21 @@ public class UploadServlet extends HttpServlet {
             request.setAttribute("message" , "文件不存在");
             request.getRequestDispatcher("/Messages/message4.jsp").forward(request , response);
         }else {
+            String str;
+            if(type.equalsIgnoreCase("text/plain")){
+                str = "txt";
+            }else if(type.equalsIgnoreCase("image/jpeg")){
+                str = "jpg";
+            }else if(type.equalsIgnoreCase("application/octet-stream")){
+                str = "jsp";
+            }else {
+                str = "other";
+            }
             //存储到服务器即我创建的MyFiles
-            part.write("Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + fname);
+            part.write("Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + str + "/" + fname);
             //用于传给下载的Sesrvlet使用即DownloadServlet
             request.getSession().setAttribute("fileName" , fname);
-            request.getSession().setAttribute("uploadPath" , "Z:/javaPro/JavaWeb文件上传下载/web/MyFiles");
+            request.getSession().setAttribute("uploadPath" , "Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + str);
 
             //用于传给vipdownload.jsp来展示给用户看文件的信息
             request.getSession().setAttribute("fname" , fname);
