@@ -54,7 +54,7 @@ public class UploadServlet extends HttpServlet {
             }
             //存储到服务器即我创建的MyFiles
             part.write("Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + str + "/" + fname);
-            //用于传给下载的Sesrvlet使用即DownloadServlet
+            //用于传给下载的Servlet使用即DownloadServlet,用到Session主要是因为要把数据保存给另一个请求用
             request.getSession().setAttribute("fileName" , fname);
             request.getSession().setAttribute("uploadPath" , "Z:/javaPro/JavaWeb文件上传下载/web/MyFiles/" + str);
 
