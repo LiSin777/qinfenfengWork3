@@ -20,7 +20,7 @@
 
   <body>
   		<font color="red" size="20"> ${message}</font><br>
-        <a href="http://localhost:808/JavaWeb/login.html">马上登陆</a>
+        <a href="http://localhost:808/JavaWeb/login.jsp">马上登陆</a>
   </body>
 </html></span>
 </body>
