@@ -39,9 +39,11 @@ public class LoginServlet extends HttpServlet {
             cookie2.setMaxAge(60 * 60 * 24 * 7);
             resp.addCookie(cookie);
             resp.addCookie(cookie2);
+            //给Filter判断是否登陆成功
+            req.getSession().setAttribute("user" , username);
 
             //如果登陆成功就进入上传页面
-            req.getRequestDispatcher("upload.html").forward(req , resp);
+            req.getRequestDispatcher("/admin/upload.html").forward(req , resp);
         }else{
             //失败就跳转重新登录
             req.setAttribute("message" , "用户名或密码错误");

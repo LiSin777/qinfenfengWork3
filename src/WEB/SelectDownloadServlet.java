@@ -17,9 +17,9 @@ public class SelectDownloadServlet extends HttpServlet {
         String identity = request.getParameter("vip");
 
         if("yes".equals(identity)){
-            request.getRequestDispatcher("vipdownload.jsp").forward(request , response);
+            request.getRequestDispatcher("/admin/vipdownload.jsp").forward(request , response);
         }else {
-            request.getRequestDispatcher("download.jsp").forward(request , response);
+            request.getRequestDispatcher("/admin/download.jsp").forward(request , response);
         }
     }
 

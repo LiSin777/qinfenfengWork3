@@ -29,14 +29,14 @@
             <div class="login_box">
                 <div class="tit">
                     <h1>勤奋蜂</h1>
-                    <a href="regist.html">立即注册</a>
+                    <a href="admin/regist.html">立即注册</a>
                 </div>
                 <div class="msg_cont">
                     <b></b>
                     <span class="errorMsg">请输入用户名和密码</span>
                 </div>
                 <div class="form">
-                    <form action="loginServlet">
+                    <form action="http://localhost:808/JavaWeb/loginServlet" method="post">
                         <label>用户名称：</label>
                         <input class="itxt" type="text" placeholder="请输入用户名" autocomplete="off"
                                tabindex="1" name="username" value="${cookie.cookieUsername.value}"}/>

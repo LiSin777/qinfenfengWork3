@@ -1,0 +1,32 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="" >
+        姓名：<input type="text" name="username"><br>
+        照片1：<input type="file" name="picFile"><br>
+        &lt;!&ndash; 照片2：<input type="file" name="pic2"><br>
+        照片3：<input type="file" name="pic3"><br> &ndash;&gt;
+        <input type="submit" value="上传">
+        <input type="reset" value="重置">
+    </form>
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="uploadServlet" method="post" enctype="multipart/form-data">
+    <input type="file" name="myfile"/>
+    <button>Submit</button>
+</form>
+</body>
+</html>

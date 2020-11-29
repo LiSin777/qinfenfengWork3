@@ -66,7 +66,7 @@ public class UploadServlet extends HttpServlet {
             request.getSession().setAttribute("size" , size);
 
             //跳转到判断是否是vip
-            request.getRequestDispatcher("isvip.jsp").forward(request , response);
+            request.getRequestDispatcher("/admin/isvip.jsp").forward(request , response);
         }
 
 

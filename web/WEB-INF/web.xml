@@ -3,6 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <filter>
+        <filter-name>adminFilter</filter-name>
+        <filter-class>Filter.adminFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>adminFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+    <!-- 过滤器只有登陆成功用户可以访问Myfiles文件夹-->
+
     <!-- 注册页面-->
     <servlet>
         <servlet-name>RegistServlet</servlet-name>
