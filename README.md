@@ -23,3 +23,8 @@
   暂时只分了几种类型
 8.Cookie
   运用Cookie来保存登陆成功用户的用户名和密码,下次登录默认自动填充。
+9.Filter
+  运用了Filter过滤器来过滤掉非用户直接对下载上传页面的请求,访问这些页面前需要登录
+
+涉及的Java知识：JavaSE,数据库连接技术,数据库连接池,JDBCUtils(QueryRunner),Servlet,jsp,EL表达式,请求转发,请求重定向,
+                文件流,Cookie,Filter,Session域,request域,文件操作,Part获取文件单元,一点Java前端知识。
